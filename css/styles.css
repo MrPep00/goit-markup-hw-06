@@ -17,6 +17,7 @@ body {
   --icon-def: #afb1b8;
   --background-overlay-offers: #2f303acc;
   --footer-placrholder-color: #75757580;
+  --request-form-border-color: #21212133;
 }
 svg {
   vertical-align: middle;
@@ -167,8 +168,7 @@ main page styles
   padding: 6px;
   border: 1px solid #0000001a;
   border-radius: 50%;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    linear-gradient(0deg, #ffffff, #ffffff);
+  background: var(--button-text-color);
 }
 .modal {
   top: 50%;
@@ -204,6 +204,45 @@ main page styles
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.25);
+}
+.request-form-group {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+#request-form-header {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: var(--main-text-color);
+  margin-bottom: 12px;
+}
+.request-form-label {
+  display: flex;
+  flex-direction: column;
+  color: var(--secondary-text-color);
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  position: relative;
+}
+.request-form-input {
+  border-radius: 4px;
+  border: 1px solid var(--request-form-border-color);
+  padding-left: 42px;
+  height: 40px;
+}
+.request-form-textarea {
+  border-radius: 4px;
+  border: 1px solid var(--request-form-border-color);
+  resize: none;
+  padding: 12px 16px;
+}
+.request-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
 }
 .benefits {
   text-align: left;
