@@ -170,6 +170,9 @@ main page styles
   border-radius: 50%;
   background: var(--button-text-color);
 }
+.close-button:hover {
+  fill: var(--button-color);
+}
 .modal {
   top: 50%;
   left: 50%;
@@ -227,22 +230,95 @@ main page styles
   margin-bottom: 10px;
   position: relative;
 }
+
 .request-form-input {
   border-radius: 4px;
   border: 1px solid var(--request-form-border-color);
   padding-left: 42px;
   height: 40px;
+  outline: none;
 }
+.request-form-label:focus-within .request-icon,
+.request-form-input:hover,
+.request-form-input:focus {
+  border-color: var(--button-color);
+  fill: var(--button-color);
+}
+
 .request-form-textarea {
   border-radius: 4px;
   border: 1px solid var(--request-form-border-color);
   resize: none;
   padding: 12px 16px;
+  margin-bottom: 20px;
+  outline: none;
+}
+.request-form-textarea:focus,
+.request-form-textarea:hover {
+  border-color: var(--button-color);
 }
 .request-icon {
   position: absolute;
   top: 50%;
   left: 12px;
+}
+.terms-conditions-label input[type="checkbox"] {
+  background: var(--button-text-color);
+  margin: 0;
+  appearance: none;
+}
+.terms-conditions-label {
+  position: relative;
+  padding-left: 24px;
+  color: var(--secondary-text-color);
+  margin-bottom: 5px;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-align: left;
+}
+.icon-checkbox {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  border: 2px solid var(--main-text-color);
+  border-radius: 4px;
+  fill: var(--button-text-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.terms-conditions-label input[type="checkbox"]:checked + svg {
+  border: none;
+  background-color: var(--button-color);
+}
+.terms-conditions-label input[type="checkbox"]:hover + svg,
+.terms-conditions-label input[type="checkbox"]:focus + svg {
+  cursor: pointer;
+  border-color: var(--button-color);
+}
+.request-send-button-box {
+  position: relative;
+}
+.request-form-send-button {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  height: 50px;
+  width: 200px;
+  position: absolute;
+  left: 25%;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--button-color);
+  color: var(--button-text-color);
+
+  box-shadow: 0px 4px 4px 0px #00000026;
+}
+.request-form-send-button:hover {
+  cursor: pointer;
 }
 .benefits {
   text-align: left;
