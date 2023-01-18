@@ -212,6 +212,7 @@ main page styles
 .request-form-group {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 #request-form-header {
   font-size: 20px;
@@ -230,6 +231,7 @@ main page styles
   margin-bottom: 10px;
   position: relative;
   row-gap: 4px;
+  width: 100%;
 
   font-size: 12px;
   font-weight: 400;
@@ -304,9 +306,7 @@ main page styles
   cursor: pointer;
   border-color: var(--button-color);
 }
-.request-send-button-box {
-  position: relative;
-}
+
 .request-form-send-button {
   font-size: 16px;
   font-weight: 700;
@@ -315,8 +315,6 @@ main page styles
 
   height: 50px;
   width: 200px;
-  position: absolute;
-  left: 25%;
   border: none;
   border-radius: 4px;
   background-color: var(--button-color);
